@@ -1,0 +1,31 @@
+{
+  "name": "vanilla-todo-app",
+  "version": "1.0.0",
+  "description": "Simple vanilla js todo app",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gilp": "0.0.7",
+    "gulp-sass": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alfa86/Todo-App.git"
+  },
+  "keywords": [
+    "todo"
+  ],
+  "author": "Igor Apfentaler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Alfa86/Todo-App/issues"
+  },
+  "homepage": "https://github.com/Alfa86/Todo-App#readme"
+}

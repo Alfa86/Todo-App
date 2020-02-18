@@ -1,0 +1,266 @@
+@import "scroler";
+@import "font";
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+  $color-red: #AE1100;
+  $color-bg: #EBECF0;
+  $color-shadow: #BABECC;
+  $color-white: #FFF;
+  $ruler: 16px;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body, html {
+  background-color:$color-bg;
+}
+h2 {
+  font-size: 25px;
+  padding: 25px 5px;
+  text-shadow: 1px 1px 0 $color-white;
+}
+.todo {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  article {
+    margin-top: 10vh;
+    padding: 0px 25px 25px;
+    min-width: 300px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    background-color:$color-bg;
+    border-radius:4px;
+    box-shadow: -2.3px -2.3px 3.8px rgba(255, 255, 255, 0.2), -6.3px -6.3px 10.6px rgba(255, 255, 255, 0.3), -15.1px -15.1px 25.6px rgba(255, 255, 255, 0.4), -50px -50px 85px rgba(255, 255, 255, 0.07), 2.3px 2.3px 3.8px rgba(0, 0, 0, 0.024), 6.3px 6.3px 10.6px rgba(0, 0, 0, 0.035), 15.1px 15.1px 25.6px rgba(0, 0, 0, 0.046), 50px 50px 85px rgba(0, 0, 0, 0.07);
+  }
+}
+.todo__container {
+  display: flex;
+  input {
+    flex-grow: 1;
+    padding: 10px;
+  }
+}
+.todo__items {
+  margin-top: 25px;
+  &--container {
+    list-style: none;
+    padding-left: 0px;
+    height: 30vh;
+    overflow: auto;
+    .todo__items--item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #e4e4e4;
+      padding: 15px 25px;
+      &:last-child{
+        border-bottom: none;
+      }
+      .close--button {
+        cursor: pointer;
+        // padding: 0px 10px;
+        // background-color: #fff;
+        // border: 0px;
+        
+      }
+    }
+  }
+}
+.container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  //padding-left: 35px;
+  text-align: left;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.todo__items--item {
+  position: relative;
+  list-style: none;
+  text-align: center;
+  margin: 15px;
+}
+.container {
+  position: relative;
+  cursor: pointer;
+}
+.container input[type="checkbox"] {
+  //position: absolute;
+  opacity: 0;
+}
+.done .checkmark .icon-ok {
+  transform: scale(0.95);
+  opacity: 1;
+}
+.container .checkmark {
+  //margin-right: 25px;
+  width: 30px;
+  height: 30px;
+  background-color:$color-bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -2px -2px 5px white, 3px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.container .checkmark .icon-ok {
+  opacity: 0.5;
+}
+.done .checkmark {
+  box-shadow: inset -2px -2px 5px white, inset 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+// /* Hide the browser's default checkbox */
+// .container input {
+//   position: absolute;
+//   opacity: 0;
+//   cursor: pointer;
+//   height: 0;
+//   width: 0;
+// }
+
+// /* Create a custom checkbox */
+// .checkmark {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 20px;
+//   width: 20px;
+//   background-color: #eee;
+//   box-shadow: -2.3px -2.3px 3.8px rgba(255, 255, 255, 0.2), -6.3px -6.3px 10.6px rgba(255, 255, 255, 0.3), -15.1px -15.1px 25.6px rgba(255, 255, 255, 0.4), -50px -50px 85px rgba(255, 255, 255, 0.07), 2.3px 2.3px 3.8px rgba(0, 0, 0, 0.024), 6.3px 6.3px 10.6px rgba(0, 0, 0, 0.035), 15.1px 15.1px 25.6px rgba(0, 0, 0, 0.046), 50px 50px 85px rgba(0, 0, 0, 0.07);
+// }
+
+// /* On mouse-over, add a grey background color */
+// .container:hover input ~ .checkmark {
+//   background-color: #ccc;
+// }
+
+// /* When the checkbox is checked, add a blue background */
+// .container input:checked ~ .checkmark {
+//   background-color: #1fa9bfc7;
+// }
+
+// /* Create the checkmark/indicator (hidden when not checked) */
+// .checkmark:after {
+//   content: "";
+//   position: absolute;
+//   display: none;
+// }
+
+// /* Show the checkmark when checked */
+// .container input:checked ~ .checkmark:after {
+//   display: block;
+// }
+
+// /* Style the checkmark/indicator */
+// .container .checkmark:after {
+//   left: 6px;
+//   top: 3px;
+//   width: 5px;
+//   height: 10px;
+//   border: solid white;
+//   border-width: 0 3px 3px 0;
+//   -webkit-transform: rotate(45deg);
+//   -ms-transform: rotate(45deg);
+//   transform: rotate(45deg);
+// }
+
+
+
+//---------------Neomorphic style
+button, input {
+  border: 0;
+  outline: 0;
+  font-size: $ruler;
+  border-radius: 4px;
+  padding: $ruler/1.3;
+  background-color:$color-bg;
+  text-shadow: 1px 1px 0 $color-white;
+}
+
+
+input {
+  margin-right: $ruler/2;
+  box-shadow:  inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-white;
+  //width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+
+  &:focus {
+    box-shadow:  inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+  }
+}
+
+button {
+  color:#61677C;
+  //font-weight: bold;
+  box-shadow: -5px -5px 20px $color-white,  5px 5px 20px $color-shadow;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  //font-weight: 600;
+  
+  &:hover {
+    box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+  }
+  
+  &:active {
+    box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+  }
+  
+  .icon {
+    margin-right: $ruler/2;
+  }
+  
+  &.unit {
+    border-radius: $ruler/2;
+    line-height: 0;
+    width: $ruler*3;
+    height: $ruler*3;
+    display:inline-flex;
+    justify-content: center;
+    align-items:center;
+    margin: 0 $ruler/2;
+    font-size: $ruler*1.2;
+    
+    .icon {
+      margin-right: 0; 
+    }
+  }
+  
+  &.red {
+    display: block;
+    width: 100%;
+    color:$color-red;
+  }
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  
+  label {
+    margin: 0;
+    flex: 1;
+  }
+}
