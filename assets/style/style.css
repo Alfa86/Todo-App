@@ -93,13 +93,14 @@ input[type="number"]::-webkit-outer-spin-button {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif; }
 
-body, html {
-  background-color: #EBECF0; }
+body,
+html {
+  background-color: #ebecf0; }
 
 h2 {
   font-size: 25px;
   padding: 25px 5px;
-  text-shadow: 1px 1px 0 #FFF; }
+  text-shadow: 1px 1px 0 #fff; }
 
 .todo {
   width: 100vw;
@@ -114,7 +115,7 @@ h2 {
     max-width: 600px;
     width: 100%;
     text-align: center;
-    background-color: #EBECF0;
+    background-color: #ebecf0;
     border-radius: 4px;
     box-shadow: -2.3px -2.3px 3.8px rgba(255, 255, 255, 0.2), -6.3px -6.3px 10.6px rgba(255, 255, 255, 0.3), -15.1px -15.1px 25.6px rgba(255, 255, 255, 0.4), -50px -50px 85px rgba(255, 255, 255, 0.07), 2.3px 2.3px 3.8px rgba(0, 0, 0, 0.024), 6.3px 6.3px 10.6px rgba(0, 0, 0, 0.035), 15.1px 15.1px 25.6px rgba(0, 0, 0, 0.046), 50px 50px 85px rgba(0, 0, 0, 0.07); }
 
@@ -129,14 +130,14 @@ h2 {
   .todo__items--container {
     list-style: none;
     padding-left: 0px;
-    height: 30vh;
+    height: 40vh;
     overflow: auto; }
     .todo__items--container .todo__items--item {
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid #e4e4e4;
-      padding: 15px 25px; }
+      padding: 15px 7px 15px 0; }
       .todo__items--container .todo__items--item:last-child {
         border-bottom: none; }
       .todo__items--container .todo__items--item .close--button {
@@ -169,54 +170,53 @@ h2 {
 .container input[type="checkbox"] {
   opacity: 0; }
 
-.done .checkmark .icon-ok {
+.container.done .checkmark .icon-ok {
   transform: scale(0.95);
   opacity: 1; }
 
 .container .checkmark {
-  width: 30px;
-  height: 30px;
-  background-color: #EBECF0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: -2px -2px 5px white, 3px 3px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 10px; }
+  padding: 10px;
+  color: #61677c;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 4px; }
 
 .container .checkmark .icon-ok {
-  opacity: 0.5; }
+  opacity: 0.3; }
 
 .done .checkmark {
   box-shadow: inset -2px -2px 5px white, inset 3px 3px 5px rgba(0, 0, 0, 0.1); }
 
-button, input {
+button,
+input {
   border: 0;
   outline: 0;
   font-size: 16px;
   border-radius: 4px;
   padding: 12.30769px;
-  background-color: #EBECF0;
-  text-shadow: 1px 1px 0 #FFF; }
+  background-color: #ebecf0;
+  text-shadow: 1px 1px 0 #fff; }
 
 input {
   margin-right: 8px;
-  box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
   box-sizing: border-box;
   transition: all 0.2s ease-in-out;
   appearance: none;
   -webkit-appearance: none; }
   input:focus {
-    box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF; }
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff; }
 
 button {
-  color: #61677C;
-  box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
+  color: #61677c;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
   transition: all 0.2s ease-in-out;
   cursor: pointer; }
   button:hover {
-    box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC; }
+    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc; }
   button:active {
-    box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF; }
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff; }
   button .icon {
     margin-right: 8px; }
   button.unit {
@@ -234,7 +234,7 @@ button {
   button.red {
     display: block;
     width: 100%;
-    color: #AE1100; }
+    color: #ae1100; }
 
 .input-group {
   display: flex;
