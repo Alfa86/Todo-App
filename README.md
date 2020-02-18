@@ -9,6 +9,4 @@ $ npm install
 $ gulp watch
 
 ---
-
-![To do App](https://github.com/Alfa86/Todo-App/blob/master/assets/img/prtSc.png)
-
+https://github.com/Alfa86/Todo-App/blob/master/assets/img/prtSc.png
