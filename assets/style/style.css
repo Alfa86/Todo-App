@@ -102,6 +102,12 @@ h2 {
   padding: 25px 5px;
   text-shadow: 1px 1px 0 #fff; }
 
+h4 {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: left;
+  color: #61677c; }
+
 .todo {
   width: 100vw;
   display: flex;
@@ -187,6 +193,15 @@ h2 {
 
 .done .checkmark {
   box-shadow: inset -2px -2px 5px white, inset 3px 3px 5px rgba(0, 0, 0, 0.1); }
+
+.item-done {
+  text-decoration: line-through;
+  text-align: left;
+  border-bottom: 1px solid #e4e4e4;
+  color: #bebebe;
+  font-size: 12px;
+  line-height: 1.5em;
+  padding-bottom: 8px; }
 
 button,
 input {

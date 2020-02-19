@@ -24,6 +24,12 @@ h2 {
   padding: 25px 5px;
   text-shadow: 1px 1px 0 $color-white;
 }
+h4 {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: left;
+  color: #61677c;
+}
 .todo {
   width: 100vw;
   display: flex;
@@ -112,14 +118,6 @@ h2 {
   opacity: 1;
 }
 .container .checkmark {
-  // width: 30px;
-  // height: 30px;
-  // background-color: $color-bg;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // box-shadow: -2px -2px 5px white, 3px 3px 5px rgba(0, 0, 0, 0.1);
-  // border-radius: 10px;
   padding: 10px;
   color: #61677c;
   box-shadow: -5px -5px 20px $color-white, 5px 5px 20px $color-shadow;
@@ -132,6 +130,15 @@ h2 {
 }
 .done .checkmark {
   box-shadow: inset -2px -2px 5px white, inset 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.item-done {
+  text-decoration: line-through;
+  text-align: left;
+  border-bottom: 1px solid #e4e4e4;
+  color: #bebebe;
+  font-size: 12px;
+  line-height: 1.5em;
+  padding-bottom: 8px;
 }
 
 //---------------Neomorphic style
