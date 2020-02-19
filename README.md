@@ -1,12 +1,12 @@
 # Todo-App
-## Build Setup
 
+## Screen
+![ToDo App](/assets/img/prtSc.png)
+
+## Build Setup
 ```bash
 # install dependencies
 $ npm install
 
 # run gulp
 $ gulp watch
-
----
-https://github.com/Alfa86/Todo-App/blob/master/assets/img/prtSc.png
