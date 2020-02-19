@@ -1,6 +1,6 @@
 const addTodo = document.querySelector(".add-todo");
 addTodo.addEventListener("click", addNew);
-document.querySelector(".add-todo").addEventListener('keyup', e => {
+document.querySelector("#add-todo").addEventListener("keyup", e => {
   if (e.keyCode === 13) {
     addNew();
   }
@@ -24,13 +24,14 @@ function addNew() {
     checkmark.classList.add("checkmark");
     checkmark.innerHTML = `<span class="icon-ok"></span>`;
     closeButton.classList.add("close--button");
+    closeButton.classList.add("icon-trash");
     checkBox.classList.add("check-box-input");
 
-    closeButton.innerHTML = `<span class="icon-trash"></span>`;
+    //closeButton.innerHTML = `<span class="icon-trash"></span>`;
     checkBox.setAttribute("type", "checkbox");
     closeButton.addEventListener("click", removeItem);
-    checkBox.addEventListener('click', itemDone);
-    
+    checkBox.addEventListener("click", itemDone);
+
     labelText.prepend(checkmark, checkBox);
     li.append(labelText, closeButton);
     li.classList.add("todo__items--item");
@@ -40,9 +41,9 @@ function addNew() {
 }
 function itemDone(event) {
   const item = event.target;
-  item.parentNode.classList.toggle('done');
-}	
+  item.parentNode.classList.toggle("done");
+}
 function removeItem(event) {
   const removeButton = event.target;
-  removeButton.parentNode.parentNode.remove();
+  removeButton.parentElement.remove();
 }
